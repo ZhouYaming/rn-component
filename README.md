@@ -65,7 +65,7 @@
 
 ps. 如果跑项目失败，删除你的node_modules 重新安装 (包与包之间的依赖关系) 
 ```
-![结果图](../asset/day_by_day/06/img.jpeg)
+![结果图](https://github.com/onionRunning/daily_record/blob/master/asset/day_by_day/06/img.jpeg)
 
 
 ### 发布你的react-native组件库
