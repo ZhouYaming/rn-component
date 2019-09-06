@@ -65,16 +65,118 @@
 
 ps. 如果跑项目失败，删除你的node_modules 重新安装 (包与包之间的依赖关系) 
 ```
+### 新建基础组件并且调试
+storybook/stories/input
+```
+import React from 'react'
+
+import { View , TextInput, Text , StyleSheet } from 'react-native' 
+
+interface Iprops{
+    title ?: string
+    changeVals ?:(v:any) => void
+}
+
+class BaseInput extends React.Component<Iprops>{
+
+    render(){
+        return (
+            <View style={styles.center_box}>
+                <View style={styles.base_text}><Text style={styles.title}>{this.props.title}</Text></View>
+                <View style={styles.base_ipt}><TextInput style={styles.ipt} onChangeText={this.changeVals}/></View>
+            </View>    
+        )
+    }
+
+    changeVals = (e) =>{
+        this.props.changeVals(e)
+    }
+}
+
+const styles = StyleSheet.create({
+    center_box:{
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+        flexDirection:'row'
+    },
+    base_ipt:{
+        borderColor:"#fef",
+        height:30,
+        marginLeft:10,
+        marginRight:16,
+        flex:1,
+    },
+    base_text:{
+        height:30,
+        marginLeft:16,
+    },
+    ipt:{
+        borderColor:"#Fa0",
+        borderBottomWidth:1,
+        height:30,
+        paddingLeft:10,
+    },
+    title:{
+        lineHeight:30,
+    }
+})
+
+export default BaseInput
+```
+stories/index.js
+``` js
+import React from 'react';
+import { Text } from 'react-native';
+
+import { storiesOf } from '@storybook/react-native';
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
+
+// eslint-disable-next-line import/extensions
+import Button from './Button';
+import CenterView from './CenterView';
+
+import BaseInput from './Input'
+
+storiesOf('input',module).add('基础niput',()=><BaseInput title={"getnamewwww"} changeVals={action('get-ipt-value')}/>)
+
+storiesOf('Button', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('with text', () => (
+    <Button onPress={action('clicked-text')}>
+      <Text>Hello Button</Text>
+    </Button>
+  ))
+  .add('with some emoji', () => (
+    <Button onPress={action('clicked-emoji')}>
+      <Text>😀 😎 👍 💯</Text>
+    </Button>
+  ));
+
+```
 ![结果图](https://github.com/onionRunning/daily_record/blob/master/asset/day_by_day/06/img.jpeg)
 
 
 ### 发布你的react-native组件库
+
+stories新建 root.ts 作为对外暴露文件
+```ts
+import BaseIpt from "./Input"
+
+
+
+export default {
+    BaseIpt
+}
+```
+
 ```
 package.json
 {
   "name": "rn_mint",
   "version": "0.0.2",
-  "main": "lib/root.ts",
+  "main": "lib/root.ts",       // 指定对外暴露文件
   "publisher":"onion_running",
   "Private":false,
   "scripts": {
