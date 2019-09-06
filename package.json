@@ -1,7 +1,9 @@
 {
   "name": "rn_mint",
   "version": "0.0.1",
-  "private": true,
+  "main": "lib/root.ts",
+  "publisher":"onion_running",
+  "Private":false,
   "scripts": {
     "start": "react-native start",
     "test": "jest",
