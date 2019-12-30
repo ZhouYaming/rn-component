@@ -2971,6 +2971,10 @@ commander@~2.13.0:
   version "2.13.0"
   resolved "https://registry.npm.taobao.org/commander/download/commander-2.13.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
 
+commander@~2.20.3:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+
 common-tags@^1.8.0:
   version "1.8.0"
   resolved "https://registry.npm.taobao.org/common-tags/download/common-tags-1.8.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcommon-tags%2Fdownload%2Fcommon-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
@@ -4536,8 +4540,8 @@ gzip-size@5.1.1:
     pify "^4.0.1"
 
 handlebars@^4.1.2:
-  version "4.2.0"
-  resolved "https://registry.npm.taobao.org/handlebars/download/handlebars-4.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhandlebars%2Fdownload%2Fhandlebars-4.2.0.tgz#57ce8d2175b9bbb3d8b3cf3e4217b1aec8ddcb2e"
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.3.tgz#5cf75bd8714f7605713511a56be7c349becb0482"
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -6366,7 +6370,7 @@ minimist@^1.1.1, minimist@^1.2.0:
 
 minimist@~0.0.1:
   version "0.0.10"
-  resolved "https://registry.npm.taobao.org/minimist/download/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
 minipass@^2.2.1, minipass@^2.3.5:
   version "2.5.0"
@@ -6765,7 +6769,7 @@ open@^6.1.0, open@^6.2.0, open@^6.3.0:
 
 optimist@^0.6.1:
   version "0.6.1"
-  resolved "https://registry.npm.taobao.org/optimist/download/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
+  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
   dependencies:
     minimist "~0.0.1"
     wordwrap "~0.0.2"
@@ -8362,7 +8366,7 @@ source-map@^0.5.0, source-map@^0.5.6, source-map@^0.5.7:
 
 source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
-  resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
 space-separated-tokens@^1.0.0:
   version "1.1.4"
@@ -8896,7 +8900,14 @@ uglify-es@^3.1.9:
     commander "~2.13.0"
     source-map "~0.6.1"
 
-uglify-js@^3.1.4, uglify-js@^3.5.1:
+uglify-js@^3.1.4:
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.7.3.tgz#f918fce9182f466d5140f24bb0ff35c2d32dcc6a"
+  dependencies:
+    commander "~2.20.3"
+    source-map "~0.6.1"
+
+uglify-js@^3.5.1:
   version "3.6.0"
   resolved "https://registry.npm.taobao.org/uglify-js/download/uglify-js-3.6.0.tgz#704681345c53a8b2079fb6cec294b05ead242ff5"
   dependencies:
@@ -9261,7 +9272,7 @@ wordwrap@^1.0.0, wordwrap@~1.0.0:
 
 wordwrap@~0.0.2:
   version "0.0.3"
-  resolved "https://registry.npm.taobao.org/wordwrap/download/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 worker-farm@^1.7.0:
   version "1.7.0"
